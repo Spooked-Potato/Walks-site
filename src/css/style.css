@@ -1,0 +1,25 @@
+.footer {
+  min-height: 10rem;
+  background-color: var(--main-color);
+  display: flex;
+  align-content: center;
+}
+
+.footer-text-wrapper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #fff;
+  height: 100%;
+}
+
+.footer-p {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: clamp(0.8rem, 1rem, 1.2rem);
+}
+
+@media only screen and (min-width: 40em) {
+}
