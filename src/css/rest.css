@@ -7,6 +7,7 @@
   --color: #c5d8a4;
   --overlay-color: #707070;
   --text-color: #1e1e1e;
+  --box-shadow: 10px 12px 6px #1e1e1e7d;
 }
 
 *,
@@ -101,7 +102,7 @@ option {
 .button:is(:hover, :focus) {
   background-color: #fff;
   color: var(--main-color);
-  box-shadow: 10px 12px 6px #1e1e1e7d;
+  box-shadow: var(--box-shadow);
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
   font-weight: 700;

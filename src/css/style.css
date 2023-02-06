@@ -22,6 +22,7 @@
 
 /*Navbar*/
 
+/*banner*/
 .banner {
   background-image: url(../assets/Hero-img.png);
   max-height: 40rem;
@@ -36,11 +37,13 @@
   height: 40rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
+/*banner*/
 
+/*main-section*/
 .main-section {
   background-color: var(--main-color);
-  padding: 2rem;
-  height: 60rem;
+  padding: 4rem;
+  height: auto;
 }
 
 .main-section-title {
@@ -50,8 +53,16 @@
 
 .main-section-text {
   color: #ffffff;
+  padding: 2rem;
+  text-align: justify;
 }
 
+.main-section-img {
+  box-shadow: var(--box-shadow);
+}
+/*main-section*/
+
+/*section-choices*/
 .section-choices {
   padding: 2rem;
 }
@@ -66,6 +77,8 @@
   padding: 2rem;
   text-align: justify;
 }
+
+/*section-choices*/
 
 /*Footer*/
 .footer {
@@ -116,6 +129,7 @@
   }
   /*Navbar*/
 
+  /*main-section*/
   .main-section-wrapper {
     display: flex;
     align-items: center;
@@ -124,6 +138,21 @@
     gap: 5rem;
   }
 
+  .main-section-text {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .main-section-img-container {
+    max-width: 30%;
+    padding: 2rem;
+  }
+
+  .main-section-img {
+    object-fit: cover;
+  }
+
+  /*main-section*/
   .section-choices {
     display: flex;
     gap: 5rem;
@@ -131,65 +160,28 @@
   }
 
   .image-grid {
-    padding: 2rem;
+    max-width: 100%;
     display: grid;
-
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-      "img-1 img-2 img-3 img-3 img-4 img-4"
-      "img-5 img-6 img-3 img-3 img-4 img-4"
-      "img-7 img-7 img-3 img-3 img-8 img-9"
-      "img-7 img-7 img-3 img-3 img-10 img-11"
-      "img-12 img-12 img-12 img-12 img-12 img-12";
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5rem;
+    background-color: #2196f3;
+    padding: 10px;
   }
 
-  .img-1 {
-    grid-area: img-1;
-    background-image: url(/src/assets/montaria.png);
-    width: 400px;
-    height: 440px;
-  }
-  .img-2 {
-    grid-area: img-2;
-  }
-  .img-3 {
-    grid-area: img-3;
-  }
-  .img-4 {
-    grid-area: img-4;
-  }
-  .img-5 {
-    grid-area: img-5;
-  }
-  .img-6 {
-    grid-area: img-6;
-  }
-  .img-7 {
-    grid-area: img-7;
-  }
-  .img-8 {
-    grid-area: img-8;
-  }
-  .img-9 {
-    grid-area: img-9;
-  }
-  .img-10 {
-    grid-area: img-10;
-  }
-  .img-11 {
-    grid-area: img-11;
-  }
-  .img-12 {
-    grid-area: img-12;
+  .image-grid-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
   }
 
   .image-grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
     transition: 1s ease;
-    width: 100%;
-    height: auto;
-    border: 2px solid #fff;
-    background-size: cover;
-    background-repeat: no-repeat;
+    border: 5px solid red;
   }
 
   .image-grid-item:hover {
