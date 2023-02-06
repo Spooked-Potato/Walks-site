@@ -76,7 +76,32 @@ option {
   font-size: clamp(1.4rem, 1.2vw, 2rem);
 }
 
-label {
-}
+/* label {
+} */
 
 /*buttons*/
+.container-button {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.button {
+  background-color: var(--main-color);
+  width: 20rem;
+  padding: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid var(--main-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.button:is(:hover, :focus) {
+  background-color: #fff;
+  color: var(--main-color);
+  box-shadow: 10px 12px 6px #1e1e1e7d;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
