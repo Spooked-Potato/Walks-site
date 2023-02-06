@@ -40,6 +40,8 @@
 
 .section-choices {
   padding: 5rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .spliter {
@@ -53,15 +55,30 @@
   text-align: justify;
 }
 
+.container-button {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .button {
   background-color: var(--main-color);
   width: 20rem;
   padding: 0.5rem;
   color: #fff;
-  outline-color: transparent;
   cursor: pointer;
   text-transform: uppercase;
   text-align: center;
+  border: 2px solid var(--main-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.button:is(:hover, :focus) {
+  background-color: #fff;
+  color: var(--main-color);
+  box-shadow: 10px 12px 6px #1e1e1e7d;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 
 /*Footer*/
@@ -102,14 +119,14 @@
 
   .navbar-menu-item {
     border: none;
+    transition: all 0.3s ease-in-out;
   }
 
   .navbar-menu-item:is(:hover, :focus) {
     text-decoration: underline 2px #ffffff;
     text-underline-offset: 8px;
-    padding-top: 2px;
+
     cursor: pointer;
-    transition: 0.3s;
     transform: scale(1.05);
   }
   /*Navbar*/
@@ -126,11 +143,5 @@
     display: flex;
     gap: 5rem;
     justify-content: center;
-  }
-
-  .container-button {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
   }
 }
