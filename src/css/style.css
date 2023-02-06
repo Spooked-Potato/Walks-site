@@ -22,26 +22,38 @@
 
 /*Navbar*/
 
+.banner {
+  background-image: url(../assets/Hero-img.png);
+  max-height: 40rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.overlay {
+  height: 40rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .main-section {
   background-color: var(--main-color);
-  padding: 5rem;
+  padding: 2rem;
+  height: 60rem;
 }
 
 .main-section-title {
   color: #ffffff;
   text-align: center;
-  padding: 1rem;
 }
 
 .main-section-text {
   color: #ffffff;
-  padding: 1rem;
 }
 
 .section-choices {
-  padding: 5rem;
-  width: 90%;
-  margin: 0 auto;
+  padding: 2rem;
 }
 
 .spliter {
@@ -53,32 +65,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: justify;
-}
-
-.container-button {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.button {
-  background-color: var(--main-color);
-  width: 20rem;
-  padding: 0.5rem;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-align: center;
-  border: 2px solid var(--main-color);
-  transition: all 0.5s ease-in-out;
-}
-
-.button:is(:hover, :focus) {
-  background-color: #fff;
-  color: var(--main-color);
-  box-shadow: 10px 12px 6px #1e1e1e7d;
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
 }
 
 /*Footer*/
@@ -125,7 +111,6 @@
   .navbar-menu-item:is(:hover, :focus) {
     text-decoration: underline 2px #ffffff;
     text-underline-offset: 8px;
-
     cursor: pointer;
     transform: scale(1.05);
   }
@@ -143,5 +128,76 @@
     display: flex;
     gap: 5rem;
     justify-content: center;
+  }
+
+  .image-grid {
+    padding: 2rem;
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "img-1 img-2 img-3 img-3 img-4 img-4"
+      "img-5 img-6 img-3 img-3 img-4 img-4"
+      "img-7 img-7 img-3 img-3 img-8 img-9"
+      "img-7 img-7 img-3 img-3 img-10 img-11"
+      "img-12 img-12 img-12 img-12 img-12 img-12";
+  }
+
+  .img-1 {
+    grid-area: img-1;
+    background-image: url(/src/assets/montaria.png);
+    width: 400px;
+    height: 440px;
+  }
+  .img-2 {
+    grid-area: img-2;
+  }
+  .img-3 {
+    grid-area: img-3;
+  }
+  .img-4 {
+    grid-area: img-4;
+  }
+  .img-5 {
+    grid-area: img-5;
+  }
+  .img-6 {
+    grid-area: img-6;
+  }
+  .img-7 {
+    grid-area: img-7;
+  }
+  .img-8 {
+    grid-area: img-8;
+  }
+  .img-9 {
+    grid-area: img-9;
+  }
+  .img-10 {
+    grid-area: img-10;
+  }
+  .img-11 {
+    grid-area: img-11;
+  }
+  .img-12 {
+    grid-area: img-12;
+  }
+
+  .image-grid-item {
+    transition: 1s ease;
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .image-grid-item:hover {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: 1s ease;
+    border: 2px solid black;
+    box-shadow: 10px 12px 6px #1e1e1e7d;
   }
 }

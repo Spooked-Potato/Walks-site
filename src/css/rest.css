@@ -104,4 +104,5 @@ option {
   box-shadow: 10px 12px 6px #1e1e1e7d;
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
+  font-weight: 700;
 }
