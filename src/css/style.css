@@ -24,7 +24,7 @@
 
 .main-section {
   background-color: var(--main-color);
-  padding: 2rem;
+  padding: 5rem;
 }
 
 .main-section-title {
@@ -36,6 +36,32 @@
 .main-section-text {
   color: #ffffff;
   padding: 1rem;
+}
+
+.section-choices {
+  padding: 5rem;
+}
+
+.spliter {
+  border: 5px solid gray;
+}
+
+.container-text {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: justify;
+}
+
+.button {
+  background-color: var(--main-color);
+  width: 20rem;
+  padding: 0.5rem;
+  color: #fff;
+  outline-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /*Footer*/
@@ -90,8 +116,21 @@
 
   .main-section-wrapper {
     display: flex;
+    align-items: center;
     width: 90%;
     margin: 0 auto;
     gap: 5rem;
+  }
+
+  .section-choices {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+  }
+
+  .container-button {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
   }
 }
