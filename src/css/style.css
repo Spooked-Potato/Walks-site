@@ -22,6 +22,7 @@
 
 /*Navbar*/
 
+/*------homepage-------*/
 /*banner*/
 .banner {
   background-image: url(../assets/Hero-img.png);
@@ -29,8 +30,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
 }
 
 .overlay {
@@ -87,9 +86,10 @@
 }
 
 .image-grid {
-  max-width: 90%;
+  width: 100%;
+  max-width: 100rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 40rem));
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
   grid-template-rows: repeat(3, 1fr);
   gap: 0.5rem;
 }
@@ -128,9 +128,43 @@
 .image-grid-item img:is(:hover, :focus) {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
-  transform: scale(1.5);
-  border: 0.5rem solid #eeeeee;
+  transform: scale(1.2);
   box-shadow: 10px 12px 6px #1e1e1e7d;
+}
+
+/*Great*/
+.great {
+  font-size: clamp(1.5rem, 1.8rem, 2rem);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+/*------homepage-------*/
+
+/*------Contact-------*/
+.banner-contact {
+  background-image: url("/src/assets/banner.png");
+}
+
+.contact-text {
+  text-align: center12;
+}
+
+.contact-form {
+  background-color: var(--color);
+  height: auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.form-item-container {
+  padding: 2rem;
+}
+
+.button-form {
+  display: flex;
+  justify-content: center;
 }
 
 /*Footer*/
@@ -182,7 +216,10 @@
   }
   /*Navbar*/
 
+  /*------homepage-------*/
+
   /*main-section*/
+
   .main-section-wrapper {
     display: flex;
     align-items: center;
@@ -212,7 +249,13 @@
     justify-content: center;
   }
 
-  :is(.main-section, .section-choices, .grid-wrapper) {
+  :is(.main-section, .section-choices, .grid-wrapper, .form-wrapper) {
     padding: 6rem;
+  }
+  /*------homepage-------*/
+
+  .contact-form {
+    max-width: 40%;
+    margin: 6rem auto;
   }
 }

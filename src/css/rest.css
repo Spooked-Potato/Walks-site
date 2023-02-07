@@ -77,8 +77,13 @@ option {
   font-size: clamp(1.4rem, 1.2vw, 2rem);
 }
 
-/* label {
-} */
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 2px solid var(--overlay-color);
+}
 
 /*buttons*/
 .container-button {

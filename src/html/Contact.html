@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/rest.css" type="text/css" />
+    <link rel="stylesheet" href="/src/css/style.css" type="text/css" />
+    <title>Walks</title>
+  </head>
+  <body>
+    <nav class="navbar" data-include="Navbar"></nav>
+    <header class="banner banner-contact">
+      <div class="overlay"></div>
+    </header>
+
+    <div class="contact-text">
+      <h1>contact us</h1>
+      <p>
+        If you have any questions concerning any of our walks or want to check
+        availability please do not hesitate in contacting us
+      </p>
+    </div>
+
+    <form
+      action="src/php/sender.php"
+      name="My-email-form"
+      method="post"
+      enctype="text/plain"
+      class="contact-form"
+    >
+      <div class="form-item-container">
+        <label>Name</label>
+        <input
+          type="text"
+          placeholder="What is your name?"
+          name="name"
+          required
+        />
+      </div>
+      <div class="form-item-container">
+        <label>Email</label>
+        <input
+          type="email"
+          placeholder="Input your email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="form-item-container">
+        <label>Phone Number</label>
+        <input
+          type="number"
+          placeholder="Input your Phone Number"
+          name="phonenumber"
+          required
+        />
+      </div>
+      <div class="form-item-container">
+        <label>Text</label>
+        <textarea
+          type="text"
+          rows="6"
+          placeholder="Do you have any question?"
+          name="question"
+        ></textarea>
+      </div>
+      <div class="form-item-container button-form">
+        <button type="submit" class="button">Send</button>
+      </div>
+    </form>
+
+    <footer class="footer" data-include="Footer"></footer>
+    <script src="/src/js/jquery.js"></script>
+    <script src="/src/js/script.js"></script>
+  </body>
+</html>
