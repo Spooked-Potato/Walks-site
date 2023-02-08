@@ -166,6 +166,11 @@
   display: flex;
   justify-content: center;
 }
+/*------Contact-------*/
+
+/*------Private and Open Walks-------*/
+
+/*------Private and Open Walks-------*/
 
 /*Footer*/
 .footer {
@@ -254,8 +259,21 @@
   }
   /*------homepage-------*/
 
+  /*------Contact-------*/
   .contact-form {
     max-width: 40%;
     margin: 6rem auto;
   }
+
+  /*------Contact-------*/
+
+  /*------Private and Open Walks-------*/
+  .walk-wrapper {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    gap: 5rem;
+  }
+  /*------Private and Open Walks-------*/
 }
