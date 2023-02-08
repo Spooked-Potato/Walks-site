@@ -23,10 +23,9 @@
     </div>
 
     <form
-      action="../php/sender.php"
+      action="https://formsubmit.co/dc78980864a2cc0ab3760d17c8c4cd88"
+      method="POST"
       name="My-email-form"
-      method="post"
-      enctype="text/plain"
       class="contact-form"
     >
       <div class="form-item-container">
@@ -65,6 +64,13 @@
           name="question"
         ></textarea>
       </div>
+      <input type="hidden" name="_autoresponse" value="your custom message" />
+      <input
+        type="hidden"
+        name="_next"
+        value="https://yourdomain.co/thanks.html"
+      />
+      <input type="hidden" name="_subject" value="New submission!" />
       <div class="form-item-container button-form">
         <button type="submit" class="button">Send</button>
       </div>
