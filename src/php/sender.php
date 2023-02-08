@@ -4,26 +4,20 @@
     $client_number = $_POST['phonenumber'];
     $clint_message = $_POST['question'];
 
+?>
 
-	$email_from = 'arturjddias@hotmail.com';
-	$email_subject = "New Form submission";
-	$email_body = "You have received a new message from the user $cilent_name.\n".
-                            "Here is the message:\n $client_message";
+<?php 
 
+    $to = '';
+    $_message = "New Message From:$client_name, Phone-Numeber $client_number  and the message $client_message";
+    $headers = "From: $client_email \r\n";
+        "Reply-To: $client_email" . "\r\n" .phpversion();
 
-  $to = "arturjddias@hotmail.com";
-  $headers = "From: $email_from \r\n";
-  $headers .= "Reply-To: $visitor_email \r\n";
+    mail($to, $message, $headers);
 
-  mail(
-    $to,
-  $email_subject,
-  $email_body,
-  $headers
-);
+    header('Location: ../../index.php');
+?>
 
-
-header('Location: src/html/');
 
 
 //   function IsInjected($str)
