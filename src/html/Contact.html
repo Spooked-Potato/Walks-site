@@ -27,6 +27,7 @@
       method="POST"
       name="My-email-form"
       class="contact-form"
+      id="contactForm"
     >
       <div class="form-item-container">
         <label>Name</label>
@@ -49,7 +50,7 @@
       <div class="form-item-container">
         <label>Phone Number</label>
         <input
-          type="number"
+          type="tel"
           placeholder="Input your Phone Number"
           name="phonenumber"
           required
@@ -68,11 +69,11 @@
       <input
         type="hidden"
         name="_next"
-        value="https://yourdomain.co/thanks.html"
+        value="http://127.0.0.1:5500/src/html/thankyou.html"
       />
       <input type="hidden" name="_subject" value="New submission!" />
       <div class="form-item-container button-form">
-        <button type="submit" class="button">Send</button>
+        <button type="submit" class="button btn-thankyou">Send</button>
       </div>
     </form>
 
