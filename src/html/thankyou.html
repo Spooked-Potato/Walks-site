@@ -11,16 +11,25 @@
   <body>
     <nav class="navbar" data-include="Navbar"></nav>
 
-    <div class="thankyou-contanainer">
-      <h1 clas="thankyou-h1">
-        Thank you for your message we will respond as soon as possible!
+    <div class="thankyou-container">
+      <h1 class="thankyou-h1">
+        Thank you for your message we will respond via email as soon as
+        possible!
       </h1>
-      <button type="submit" class="button btn-thankyou" id="btn">
+      <h4 class="thankyou-h4">Be sure to check your inbox and spam</h4>
+      <button
+        type="button"
+        onclick="window.location.href='index.html';"
+        value="Go Back"
+        class="button btn-thankyou"
+        id="btn"
+      >
         Go Back
       </button>
     </div>
 
-    <footer class="footer" data-include="Footer"></footer>
+    <footer class="footer thankyou-footer" data-include="Footer"></footer>
+
     <script src="../js/jquery.js"></script>
     <script src="../js/script.js"></script>
   </body>

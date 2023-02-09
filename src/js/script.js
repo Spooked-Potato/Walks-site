@@ -16,15 +16,3 @@ function initContactForm() {
   });
 }
 initContactForm();
-
-function initThankYou() {
-  goBack = document.getElementById("btn");
-
-  if (!goBack) return;
-
-  goBack.addEventListener("click", test);
-  function test() {
-    window.location.href = "index.html";
-  }
-}
-initThankYou();

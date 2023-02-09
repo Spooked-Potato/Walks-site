@@ -41,7 +41,7 @@ body {
   text-align: justify;
 }
 
-:where(h1, h2, h3) {
+:where(h1, h2, h3, h4) {
   text-align: center;
   font-weight: 600;
   text-transform: uppercase;
@@ -68,7 +68,7 @@ h3 {
   font-size: clamp(1.8rem, 2vw, 2.3rem);
 }
 
-:is(label, button, a, p, input, select, textarea) {
+:is(span, label, button, a, p, input, select, textarea, h4) {
   font-size: clamp(1.6rem, 1.8vw, 2rem);
   font-weight: 400;
 }

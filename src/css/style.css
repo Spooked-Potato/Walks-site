@@ -43,6 +43,10 @@
   background-color: var(--main-color);
   padding: 2rem;
   height: auto;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main-section-title {
@@ -54,10 +58,6 @@
   color: #ffffff;
   padding: 2rem;
   text-align: justify;
-}
-
-.main-section-img {
-  box-shadow: var(--box-shadow);
 }
 /*main-section*/
 
@@ -134,7 +134,7 @@
 
 /*Great*/
 .great {
-  font-size: clamp(1.5rem, 1.8rem, 2rem);
+  font-size: clamp(1.2rem, 1.5rem, 1.8rem);
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -143,14 +143,17 @@
 /*------homepage-------*/
 
 /*------Contact-------*/
+/*banner*/
 .banner-contact {
   background-image: url("/src/assets/banner.png");
 }
-
+/*Text*/
 .contact-text {
   text-align: center;
+  padding: 5rem;
 }
 
+/*Form*/
 .contact-form {
   background-color: var(--color);
   height: auto;
@@ -169,8 +172,50 @@
 /*------Contact-------*/
 
 /*------Private and Open Walks-------*/
+.walk-wrapper {
+  padding: 2rem;
+}
 
+.walk-img-container {
+  max-height: 100rem;
+}
+
+.walk-title {
+  color: var(--sub-color);
+  font-weight: 700;
+}
+.walk-date {
+  font-weight: 600;
+}
+
+.walk-text {
+  text-align: justify;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.walk-imgs {
+  height: inherit;
+  max-width: 30rem;
+  margin: 0 auto;
+  box-shadow: 0px 10px 12px #1e1e1eb3;
+  border-radius: 5px;
+}
 /*------Private and Open Walks-------*/
+
+/*------Thank You Page------*/
+.thankyou-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50rem;
+}
+
+.thankyou-h1 {
+  padding: 5rem !important;
+}
+
+/*------Thank You Page------*/
 
 /*Footer*/
 .footer {
@@ -195,9 +240,15 @@
   color: #fff;
   font-size: clamp(0.8rem, 1rem, 1.2rem);
 }
+
+.thankyou-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
 /*Footer*/
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 50em) {
   /*Navbar*/
   .navbar-menu {
     display: flex;
@@ -223,38 +274,19 @@
 
   /*------homepage-------*/
 
-  /*main-section*/
-
-  .main-section-wrapper {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-    gap: 5rem;
-  }
-
-  .main-section-text {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .main-section-img-container {
-    max-width: 30%;
-    padding: 2rem;
-  }
-
-  .main-section-img {
-    object-fit: cover;
-  }
-
-  /*main-section*/
   .section-choices {
     display: flex;
     gap: 5rem;
     justify-content: center;
   }
 
-  :is(.main-section, .section-choices, .grid-wrapper, .form-wrapper) {
+  :is(
+      .main-section,
+      .section-choices,
+      .grid-wrapper,
+      .form-wrapper,
+      .walk-wrapper
+    ) {
     padding: 6rem;
   }
   /*------homepage-------*/
@@ -264,16 +296,20 @@
     max-width: 40%;
     margin: 6rem auto;
   }
-
   /*------Contact-------*/
 
   /*------Private and Open Walks-------*/
-  .walk-wrapper {
+  .walk-container {
     display: flex;
     align-items: center;
-    width: 90%;
-    margin: 0 auto;
+    justify-content: center;
     gap: 5rem;
+  }
+
+  .walk-text {
+    width: 80%;
+    max-width: 100rem;
+    margin: 0;
   }
   /*------Private and Open Walks-------*/
 }

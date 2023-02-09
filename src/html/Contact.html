@@ -63,8 +63,10 @@
           rows="6"
           placeholder="Do you have any question?"
           name="question"
+          required
         ></textarea>
       </div>
+
       <input type="hidden" name="_autoresponse" value="your custom message" />
       <input
         type="hidden"
@@ -72,6 +74,7 @@
         value="http://127.0.0.1:5500/src/html/thankyou.html"
       />
       <input type="hidden" name="_subject" value="New submission!" />
+
       <div class="form-item-container button-form">
         <button type="submit" class="button btn-thankyou">Send</button>
       </div>
