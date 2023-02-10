@@ -52,6 +52,7 @@
 .main-section-title {
   color: #ffffff;
   text-align: center;
+  padding: 5rem;
 }
 
 .main-section-text {
@@ -129,6 +130,7 @@
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
+  z-index: 2;
   box-shadow: 10px 12px 6px #1e1e1e7d;
 }
 
@@ -148,6 +150,11 @@
   background-image: url("/src/assets/banner.png");
 }
 /*Text*/
+
+.contact-information {
+  padding: 2rem;
+  text-align: center;
+}
 .contact-text {
   text-align: center;
   padding: 5rem;
@@ -168,6 +175,13 @@
 .button-form {
   display: flex;
   justify-content: center;
+}
+
+.needhelp-container {
+  padding: 6rem;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 /*------Contact-------*/
 
@@ -241,7 +255,7 @@
   font-size: clamp(0.8rem, 1rem, 1.2rem);
 }
 
-.thankyou-footer {
+#thankyou-footer {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -294,7 +308,7 @@
   /*------Contact-------*/
   .contact-form {
     max-width: 40%;
-    margin: 6rem auto;
+    margin: 5rem auto;
   }
   /*------Contact-------*/
 
@@ -311,5 +325,18 @@
     max-width: 100rem;
     margin: 0;
   }
+
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 6rem;
+  }
+
+  .contact-form:nth-child(1) {
+    order: 2;
+    text-align: justify;
+    background-color: #fff;
+  }
+
   /*------Private and Open Walks-------*/
 }

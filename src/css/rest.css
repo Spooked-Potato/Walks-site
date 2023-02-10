@@ -68,9 +68,13 @@ h3 {
   font-size: clamp(1.8rem, 2vw, 2.3rem);
 }
 
-:is(span, label, button, a, p, input, select, textarea, h4) {
+:is(span, label, button, a, p, input, select, textarea, strong, h4, i) {
   font-size: clamp(1.6rem, 1.8vw, 2rem);
   font-weight: 400;
+}
+
+strong {
+  font-weight: 600;
 }
 
 option {
@@ -83,6 +87,11 @@ textarea {
   padding: 1rem;
   border-radius: 5px;
   border: 2px solid var(--overlay-color);
+}
+
+svg {
+  width: 25px;
+  height: 25px;
 }
 
 /*buttons*/
