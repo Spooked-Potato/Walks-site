@@ -5,3 +5,13 @@ $(function () {
     $(this).load(file);
   });
 });
+
+// document.addEventListener("scroll", () => {
+//   var scroll_position = window.scrollY;
+//   if (scroll_position > 50) {
+//     header.style.background =
+//       "linear-gradient(60deg, #434343 0%,   #000000 100%)";
+//   } else {
+//     header.style.background = "transparent";
+//   }
+// });

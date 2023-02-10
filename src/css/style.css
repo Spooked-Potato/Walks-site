@@ -3,6 +3,8 @@
 .navbar {
   min-height: 7.5rem;
   background-color: #1e1e1e;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-menu {
@@ -18,6 +20,10 @@
 
 .navbar-link {
   color: #fff;
+}
+
+.burger {
+  display: block;
 }
 
 /*Navbar*/
@@ -303,6 +309,18 @@
     cursor: pointer;
     transform: scale(1.05);
   }
+
+  .burger {
+    display: none;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+    transition: all 0.5s ease;
+  }
   /*Navbar*/
 
   /*------homepage-------*/
@@ -353,7 +371,6 @@
 
   .contact-form:nth-child(1) {
     order: 2;
-    text-align: justify;
     background-color: #fff;
   }
 
