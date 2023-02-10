@@ -136,10 +136,6 @@
 
 /*Great*/
 .great {
-  font-size: clamp(1.2rem, 1.5rem, 1.8rem);
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
   padding: 2rem;
 }
 /*------homepage-------*/
@@ -178,10 +174,8 @@
 }
 
 .needhelp-container {
-  padding: 6rem;
+  padding: 4rem;
   text-align: center;
-  width: 50%;
-  margin: 0 auto;
 }
 /*------Contact-------*/
 
@@ -228,8 +222,33 @@
 .thankyou-h1 {
   padding: 5rem !important;
 }
-
 /*------Thank You Page------*/
+
+/*------Login Page------*/
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10rem;
+  height: 90vh;
+  background-image: url("../assets/img-28.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  background-color: var(--color);
+  max-height: 50rem;
+  min-width: 40%;
+  max-width: 40%;
+  padding: 4rem;
+  border-radius: 2rem;
+}
+
+.login-container {
+  padding: 2rem;
+}
+/*------Login Page------*/
 
 /*Footer*/
 .footer {
@@ -255,7 +274,7 @@
   font-size: clamp(0.8rem, 1rem, 1.2rem);
 }
 
-#thankyou-footer {
+.thankyou-footer {
   width: 100%;
   position: absolute;
   bottom: 0;

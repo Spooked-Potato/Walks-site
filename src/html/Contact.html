@@ -26,10 +26,8 @@
       <div class="contact-form needhelp-container">
         <h2>Need Help?</h2>
         <strong>You can contact us via:</strong><br />
-        <p>
-          Email: contact@portugalwalks.com<br />
-          WhatsApp: +351 965 753 033
-        </p>
+        <p>Email: contact@portugalwalks.com<br /></p>
+        <p>WhatsApp: +351 965 753 033</p>
       </div>
 
       <form
@@ -84,8 +82,13 @@
           name="_next"
           value="http://127.0.0.1:5500/src/html/thankyou.html"
         />
+        <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_subject" value="New submission!" />
-
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Thank you for your message we will respond as soon as possible"
+        />
         <div class="form-item-container button-form">
           <button type="submit" class="button btn-thankyou">Send</button>
         </div>

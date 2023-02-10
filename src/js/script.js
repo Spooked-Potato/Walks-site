@@ -5,14 +5,3 @@ $(function () {
     $(this).load(file);
   });
 });
-
-function initContactForm() {
-  const form = document.getElementById("contactForm");
-
-  if (!form) return;
-
-  form.addEventListener("submit", () => {
-    alert("Message was send successfully");
-  });
-}
-initContactForm();
