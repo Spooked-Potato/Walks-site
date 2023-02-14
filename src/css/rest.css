@@ -89,11 +89,6 @@ textarea {
   border: 2px solid var(--overlay-color);
 }
 
-svg {
-  width: 25px;
-  height: 25px;
-}
-
 /*buttons*/
 .container-button {
   display: flex;

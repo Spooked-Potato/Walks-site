@@ -22,10 +22,25 @@
   color: #fff;
 }
 
-.burger {
-  display: block;
+#nav-desktop {
+  display: none;
 }
 
+#navmobile {
+  display: none;
+}
+
+#navshowbutton {
+  display: flex;
+  justify-content: end;
+  padding: 2rem;
+  min-height: inherit;
+}
+
+#svgnav {
+  cursor: pointer;
+  fill: #ffffff;
+}
 /*Navbar*/
 
 /*------homepage-------*/
@@ -289,6 +304,18 @@
 
 @media only screen and (min-width: 50em) {
   /*Navbar*/
+  #nav-mobile {
+    display: none;
+  }
+
+  #navshowbutton {
+    display: none;
+  }
+
+  #nav-desktop {
+    display: flex;
+  }
+
   .navbar-menu {
     display: flex;
     justify-content: space-evenly;
@@ -310,17 +337,6 @@
     transform: scale(1.05);
   }
 
-  .burger {
-    display: none;
-  }
-
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 5px;
-    transition: all 0.5s ease;
-  }
   /*Navbar*/
 
   /*------homepage-------*/

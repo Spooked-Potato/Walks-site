@@ -6,6 +6,24 @@ $(function () {
   });
 });
 
+function showNav() {
+  const buttonNav = document.getElementById("navshowbutton");
+  buttonNav.addEventListener("click", showButton);
+
+  function showButton() {
+    alert("Show");
+    const navShow = document.getElementById("navmobile");
+
+    if (navShow.style.display === "none") {
+      navShow.style.display = "block";
+    } else {
+      navShow.style.display = "none";
+    }
+  }
+}
+
+showNav();
+
 // document.addEventListener("scroll", () => {
 //   var scroll_position = window.scrollY;
 //   if (scroll_position > 50) {
