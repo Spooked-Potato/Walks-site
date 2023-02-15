@@ -15,6 +15,17 @@
 //   });
 // });
 
+function scrollNav() {
+  navScroll = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    const scroll_position = window.scrollY;
+
+    let style = "";
+    scroll_position > 400 ? (style = "#1e1e1e") : (style = "transparent");
+    navScroll.style.backgroundColor = style;
+  });
+}
+
 function showNav() {
   const buttonNav = document.getElementById("navshowbutton");
   buttonNav.addEventListener("click", showButton);
@@ -38,24 +49,15 @@ window.onload = () => {
   let totalElementCount = elements.length;
   let i = 0;
   elements.forEach(async (element) => {
-    const url = element.getAttribute("include") + ".html";
-    const req = await fecth(url);
+    const url = element.getAttribute("data-include") + ".html";
+    const req = await fetch(url);
     const res = await req.text();
     element.innerHTML = res;
 
     i++;
     if (i >= totalElementCount) {
+      scrollNav();
       showNav();
     }
   });
 };
-
-// document.addEventListener("scroll", () => {
-//   var scroll_position = window.scrollY;
-//   if (scroll_position > 50) {
-//     header.style.background =
-//       "linear-gradient(60deg, #434343 0%,   #000000 100%)";
-//   } else {
-//     header.style.background = "transparent";
-//   }
-// });

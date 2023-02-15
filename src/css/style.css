@@ -22,6 +22,9 @@
   color: #fff;
 }
 
+#navbar {
+  background-color: transparent;
+}
 #nav-desktop {
   display: none;
 }
@@ -201,6 +204,10 @@
 /*------Contact-------*/
 
 /*------Private and Open Walks-------*/
+.walk-h1 {
+  margin-top: 6rem;
+}
+
 .walk-wrapper {
   padding: 2rem;
 }
@@ -317,7 +324,6 @@
   }
 
   .navbar-menu {
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
     min-height: inherit;
