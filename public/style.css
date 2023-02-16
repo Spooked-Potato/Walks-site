@@ -5,6 +5,7 @@
   background-color: #1e1e1e;
   position: fixed;
   width: 100%;
+  z-index: 3;
 }
 
 .navbar-menu {
@@ -49,7 +50,7 @@
 /*------homepage-------*/
 /*banner*/
 .banner {
-  background-image: url(../assets/Hero-img.png);
+  background-image: url(./assets/Hero-img.png);
   max-height: 40rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -167,7 +168,7 @@
 /*------Contact-------*/
 /*banner*/
 .banner-contact {
-  background-image: url("/src/assets/banner.png");
+  background-image: url("./assets/banner.png");
 }
 /*Text*/
 
@@ -258,7 +259,7 @@
   justify-content: center;
   padding: 10rem;
   height: 90vh;
-  background-image: url("../assets/img-28.jpg");
+  background-image: url("./assets/img-28.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

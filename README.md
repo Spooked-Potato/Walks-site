@@ -33,7 +33,7 @@ Then, update the .env file with your own environment variables.
 
 Start the server:
 
-    node index.js
+    npm run dev
 
 The server should now be running at http://localhost:3000.
 
@@ -43,6 +43,10 @@ List of dependencies used in the project:
 
 - express
 - mysql2S
+- body-parser
+- ejs
+- passport
+- Nodedemon
 
 ## Usage
 

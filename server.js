@@ -14,6 +14,22 @@ app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
+app.get("/private", (req, res) => {
+  res.render("private");
+});
+
+app.get("/weekly", (req, res) => {
+  res.render("weekly");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+app.get("/crud", (req, res) => {
+  res.render("crud");
+});
+
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
