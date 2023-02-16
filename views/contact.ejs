@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/rest.css" type="text/css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <title>Walks</title>
+  </head>
+  <body>
+    <nav class="navbar" data-include="Navbar"></nav>
+    <header class="banner banner-contact">
+      <div class="overlay"></div>
+    </header>
+
+    <div class="contact-text">
+      <h1>contact us</h1>
+      <p>
+        If you have any questions concerning any of our walks or want to check
+        availability please do not hesitate in contacting us
+      </p>
+    </div>
+
+    <div class="form-wrapper">
+      <div class="contact-form needhelp-container">
+        <h2>Need Help?</h2>
+        <strong>You can contact us via:</strong><br />
+        <p>Email: contact@portugalwalks.com<br /></p>
+        <p>Phone: +351 965 753 033</p>
+      </div>
+
+      <form
+        action="https://formsubmit.co/dc78980864a2cc0ab3760d17c8c4cd88"
+        method="POST"
+        name="My-email-form"
+        class="contact-form"
+        id="contactForm"
+      >
+        <h2>Ask us Anything</h2>
+        <div class="form-item-container">
+          <label>Name</label>
+          <input
+            type="text"
+            placeholder="What is your name?"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-item-container">
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Input your email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="form-item-container">
+          <label>Phone Number</label>
+          <input
+            type="tel"
+            placeholder="Input your Phone Number"
+            name="phonenumber"
+            required
+          />
+        </div>
+        <div class="form-item-container">
+          <label>Do you have any question?</label>
+          <textarea
+            type="text"
+            rows="6"
+            placeholder="Do you have any question?"
+            name="question"
+            required
+          ></textarea>
+        </div>
+
+        <input type="hidden" name="_autoresponse" value="your custom message" />
+        <input
+          type="hidden"
+          name="_next"
+          value="http://127.0.0.1:5500/src/html/thankyou.html"
+        />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_subject" value="New submission!" />
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Thank you for your message we will respond as soon as possible"
+        />
+        <div class="form-item-container button-form">
+          <button type="submit" class="button btn-thankyou">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer" data-include="Footer"></footer>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
