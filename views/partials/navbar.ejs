@@ -12,48 +12,6 @@
     <title>Walks</title>
   </head>
   <body>
-    <nav class="navbar" id="navbar">
-      <div id="navshowbutton">
-        <svg
-          id="svgnav"
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          width="48"
-          color="#fff"
-        >
-          <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z" />
-        </svg>
-      </div>
-
-      <ul class="navbar-menu" id="nav-desktop">
-        <li class="navbar-menu-item">
-          <a class="navbar-link" href="/">Home</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-link" href="/private">Private walks</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-link" href="/weekly">Weekly Walks</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-link" href="/contact">Contact us</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-menu" id="navmobile">
-        <li class="navbar-menu-item">
-          <a class="navbar-link" href="/">Home</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-link" href="/private">Private walks</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-link" href="/weekly">Weekly Walks</a>
-        </li>
-        <li class="navbar-menu-item">
-          <a class="navbar-link" href="/contact">Contact us</a>
-        </li>
-      </ul>
-    </nav>
+    <nav class="navbar"><%- include("inner-nav.ejs")%></nav>
   </body>
 </html>

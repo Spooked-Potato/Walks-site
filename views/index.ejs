@@ -1,124 +1,141 @@
-<%- include("./partials/navbar.ejs")%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<header class="banner">
-  <div class="overlay"></div>
-</header>
-<section class="main-section">
-  <h1 class="main-section-title">
-    Extraordinary Walking Tours in Portugal and Madeira
-  </h1>
-  <div class="walk-container">
-    <p class="main-section-text walk-text">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae placeat
-      odit, inventore necessitatibus repellendus impedit nulla atque, voluptas
-      quis facilis sapiente? Iste, facere. Impedit itaque odit quia, ea repellat
-      at. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-      Exercitationem expedita magnam nulla libero maxime fuga rerum fugiat
-      veritatis quam ipsum velit nemo, quibusdam, dignissimos ratione
-      repellendus aperiam excepturi ducimus doloribus.
-    </p>
-    <div class="walk-img-container">
-      <img class="walk-imgs" src="./assets/img-1.jpg" alt="Image Walking" />
-    </div>
-  </div>
-</section>
+    <link rel="stylesheet" href="rest.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
 
-<div class="section-choices">
-  <dv class="container">
-    <h2 class="container-title">Private Walks</h2>
-    <p class="container-text">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla vel optio,
-      deserunt alias expedita quas veniam eligendi repellendus ipsum incidunt
-      culpa corrupti ducimus? Nam tempora minus similique nemo veritatis.
-      Perspiciatis!
-    </p>
-    <div class="container-button">
-      <button class="button" onclick="window.location.href='Private.html';">
-        See More
-      </button>
-    </div>
-  </dv>
-  <div class="spliter"></div>
-  <dv class="container">
-    <h2 class="container-title">Weekly Walks</h2>
-    <p class="container-text">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla vel optio,
-      deserunt alias expedita quas veniam eligendi repellendus ipsum incidunt
-      culpa corrupti ducimus? Nam tempora minus similique nemo veritatis.
-      Perspiciatis!
-    </p>
-    <div class="container-button">
-      <button class="button" onclick="window.location.href='Weekly.html';">
-        See More
-      </button>
-    </div>
-  </dv>
-</div>
+    <script src="script.js"></script>
+    <title>Walks</title>
+  </head>
+  <body>
+    <nav id="navbar" class="navbar" id="navbar">
+      <%- include("./partials/inner-nav.ejs")%>
+    </nav>
+    <header class="banner">
+      <div class="overlay"></div>
+    </header>
+    <section class="main-section">
+      <h1 class="main-section-title">
+        Extraordinary Walking Tours in Portugal and Madeira
+      </h1>
+      <div class="walk-container">
+        <p class="main-section-text walk-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
+          placeat odit, inventore necessitatibus repellendus impedit nulla
+          atque, voluptas quis facilis sapiente? Iste, facere. Impedit itaque
+          odit quia, ea repellat at. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Exercitationem expedita magnam nulla libero maxime
+          fuga rerum fugiat veritatis quam ipsum velit nemo, quibusdam,
+          dignissimos ratione repellendus aperiam excepturi ducimus doloribus.
+        </p>
+        <div class="walk-img-container">
+          <img class="walk-imgs" src="./assets/img-1.jpg" alt="Image Walking" />
+        </div>
+      </div>
+    </section>
 
-<div class="grid-wrapper">
-  <div class="image-grid">
-    <div class="four-img-grid">
-      <div class="image-grid-item">
-        <img src="./assets/img-11.jpg" alt="Image Gird" />
-      </div>
-      <div class="image-grid-item">
-        <img src="./assets/img-14.jpg" alt="Image Gird" />
-      </div>
-      <div class="image-grid-item">
-        <img src="./assets/img-7.jpg" alt="Image Gird" />
-      </div>
-      <div class="image-grid-item">
-        <img src="./assets/img-19.jpg" alt="Image Gird" />
-      </div>
+    <div class="section-choices">
+      <dv class="container">
+        <h2 class="container-title">Private Walks</h2>
+        <p class="container-text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla vel
+          optio, deserunt alias expedita quas veniam eligendi repellendus ipsum
+          incidunt culpa corrupti ducimus? Nam tempora minus similique nemo
+          veritatis. Perspiciatis!
+        </p>
+        <div class="container-button">
+          <button class="button" onclick="window.location.href='Private.html';">
+            See More
+          </button>
+        </div>
+      </dv>
+      <div class="spliter"></div>
+      <dv class="container">
+        <h2 class="container-title">Weekly Walks</h2>
+        <p class="container-text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla vel
+          optio, deserunt alias expedita quas veniam eligendi repellendus ipsum
+          incidunt culpa corrupti ducimus? Nam tempora minus similique nemo
+          veritatis. Perspiciatis!
+        </p>
+        <div class="container-button">
+          <button class="button" onclick="window.location.href='Weekly.html';">
+            See More
+          </button>
+        </div>
+      </dv>
     </div>
 
-    <div class="main-img-grid">
-      <div class="image-grid-item">
-        <img src="./assets/img-22.jpg" alt="Image Gird" />
-      </div>
-    </div>
+    <div class="grid-wrapper">
+      <div class="image-grid">
+        <div class="four-img-grid">
+          <div class="image-grid-item">
+            <img src="./assets/img-11.jpg" alt="Image Gird" />
+          </div>
+          <div class="image-grid-item">
+            <img src="./assets/img-14.jpg" alt="Image Gird" />
+          </div>
+          <div class="image-grid-item">
+            <img src="./assets/img-7.jpg" alt="Image Gird" />
+          </div>
+          <div class="image-grid-item">
+            <img src="./assets/img-19.jpg" alt="Image Gird" />
+          </div>
+        </div>
 
-    <div class="one-img-grid">
-      <div class="image-grid-item">
-        <img src="./assets/img-4.jpg" alt="Image Gird" />
-      </div>
-    </div>
+        <div class="main-img-grid">
+          <div class="image-grid-item">
+            <img src="./assets/img-22.jpg" alt="Image Gird" />
+          </div>
+        </div>
 
-    <div class="one-img-grid">
-      <div class="image-grid-item">
-        <img src="./assets/img-6.jpg" alt="Image Gird" />
-      </div>
-    </div>
+        <div class="one-img-grid">
+          <div class="image-grid-item">
+            <img src="./assets/img-4.jpg" alt="Image Gird" />
+          </div>
+        </div>
 
-    <div class="four-img-grid">
-      <div class="image-grid-item">
-        <img src="./assets/img-25.jpg" alt="Image Gird" />
-      </div>
-      <div class="image-grid-item">
-        <img src="./assets/img-21.jpg" alt="Image Gird" />
-      </div>
-      <div class="image-grid-item">
-        <img src="./assets/img-2.jpg" alt="Image Gird" />
-      </div>
-      <div class="image-grid-item">
-        <img src="./assets/img-12.jpg" alt="Image Gird" />
+        <div class="one-img-grid">
+          <div class="image-grid-item">
+            <img src="./assets/img-6.jpg" alt="Image Gird" />
+          </div>
+        </div>
+
+        <div class="four-img-grid">
+          <div class="image-grid-item">
+            <img src="./assets/img-25.jpg" alt="Image Gird" />
+          </div>
+          <div class="image-grid-item">
+            <img src="./assets/img-21.jpg" alt="Image Gird" />
+          </div>
+          <div class="image-grid-item">
+            <img src="./assets/img-2.jpg" alt="Image Gird" />
+          </div>
+          <div class="image-grid-item">
+            <img src="./assets/img-12.jpg" alt="Image Gird" />
+          </div>
+        </div>
+        <div class="image-grid-item panorama">
+          <img src="./assets/img-27.jpg" alt="Image Gird" />
+        </div>
       </div>
     </div>
-    <div class="image-grid-item panorama">
-      <img src="./assets/img-27.jpg" alt="Image Gird" />
+    <div class="needhelp-container">
+      <h2>Need Help?</h2>
+      <strong>You can contact us via:</strong><br />
+      <p>Email: contact@portugalwalks.com<br /></p>
+      <p>Phone: +351 965 753 033</p>
     </div>
-  </div>
-</div>
-<div class="needhelp-container">
-  <h2>Need Help?</h2>
-  <strong>You can contact us via:</strong><br />
-  <p>Email: contact@portugalwalks.com<br /></p>
-  <p>Phone: +351 965 753 033</p>
-</div>
-<div class="great">
-  <h3>
-    Many thanks for visiting this site. We hope to see you in Portugal for some
-    really great walking and lots of fun!
-  </h3>
-</div>
-<%- include("./partials/footer.ejs")%>
+    <div class="great">
+      <h3>
+        Many thanks for visiting this site. We hope to see you in Portugal for
+        some really great walking and lots of fun!
+      </h3>
+    </div>
+    <%- include("./partials/footer.ejs")%>
+  </body>
+</html>
