@@ -23,7 +23,7 @@ The app is built using the following technologies:
 
 To install the project, follow these steps:
 
-    Clone the repository: https://github.com/Spooked-Potato/mobile-pwm.git
+    Clone the repository: https://github.com/Spooked-Potato/Walks-site.git
 
 Install the dependencies:
 
