@@ -2,9 +2,13 @@ import express from "express";
 import ejs from "ejs";
 import bodyParser from "body-parser";
 const app = express();
+import { connection } from "./database.js";
+import { admin_router } from "./routes/admin.js";
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+
+app.use("/", admin_router);
 
 app.get("/", (req, res) => {
   res.render("index");
@@ -24,10 +28,6 @@ app.get("/weekly", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.render("login");
-});
-
-app.get("/crud", (req, res) => {
-  res.render("crud");
 });
 
 app.listen(3000, () => {

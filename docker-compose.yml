@@ -1,0 +1,21 @@
+version: "3"
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: walks
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - 3306:3306
+    volumes:
+      - C:\Users\artur\OneDrive\Documentos\Projetos\Mysites\Julie\mysql:/docker-entrypoint-initdb.d
+      - C:\Users\artur\OneDrive\Documentos\Projetos\Mysites\Julie\mysql-data/:/var/lib/mysql
+    networks:
+      - walks-network
+
+networks:
+  walks-network:
+    driver: bridge
+
+volumes:
+  db-data:

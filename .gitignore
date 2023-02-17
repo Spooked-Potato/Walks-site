@@ -2,6 +2,7 @@
 
 assets
 
+mysql-data
 # misc
 
 .env.local
