@@ -1,0 +1,27 @@
+<tr>
+  <td>
+    <span class="custom-checkbox">
+      <input type="checkbox" id="checkbox1" name="options[]" value="1" />
+      <label for="checkbox1"></label>
+    </span>
+  </td>
+  <td><%= item.walk_title %></td>
+  <td><%= item.description %></td>
+  <td><%= item.image_url %></td>
+  <td><%= item.walk_date %></td>
+  <td><%= item.created_at %></td>
+  <td><%= item.updated_at %></td>
+
+  <td>
+    <a href="#editEmployeeModal" class="edit" data-toggle="modal"
+      ><i class="material-icons" data-toggle="tooltip" title="Edit"
+        >&#xE254;</i
+      ></a
+    >
+    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"
+      ><i class="material-icons" data-toggle="tooltip" title="Delete"
+        >&#xE872;</i
+      ></a
+    >
+  </td>
+</tr>

@@ -2,13 +2,14 @@ import express from "express";
 import ejs from "ejs";
 import bodyParser from "body-parser";
 const app = express();
-import { connection } from "./database.js";
-import { admin_router } from "./routes/admin.js";
+import { queryDatabase } from "./database.js";
+import { admin_router, getWalk } from "./routes/admin.js";
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.use(bodyParser.json());
 
-app.use("/", admin_router);
+app.use("/admin", admin_router);
 
 app.get("/", (req, res) => {
   res.render("index");
@@ -28,6 +29,12 @@ app.get("/weekly", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.render("login");
+});
+
+app.get("/crud", async (req, res) => {
+  const result = await getWalk();
+  console.log(result.data);
+  res.render("crud", { items: result.data });
 });
 
 app.listen(3000, () => {

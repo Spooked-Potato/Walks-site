@@ -12,9 +12,8 @@
     <title>Walks</title>
   </head>
   <body>
-    <nav id="navbar" class="navbar" id="navbar">
-      <%- include("./partials/inner-nav.ejs")%>
-    </nav>
+    <%- include("./partials/navbar.ejs")%>
+
     <header class="banner">
       <div class="overlay"></div>
     </header>
@@ -48,7 +47,7 @@
           veritatis. Perspiciatis!
         </p>
         <div class="container-button">
-          <button class="button" onclick="window.location.href='Private.html';">
+          <button class="button" onclick="window.location.href='/private';">
             See More
           </button>
         </div>
@@ -63,7 +62,7 @@
           veritatis. Perspiciatis!
         </p>
         <div class="container-button">
-          <button class="button" onclick="window.location.href='Weekly.html';">
+          <button class="button" onclick="window.location.href='/weekly';">
             See More
           </button>
         </div>

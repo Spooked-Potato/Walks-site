@@ -3,16 +3,16 @@ use walks;
 create table user(
 	id int not null auto_increment primary key,
 	user_name varchar(100) not null,
-	admin bool not null
+	admin bool DEFAULT true
 );
 
 
 create table walkPost(
 	id int not null auto_increment primary key,
-	walk_tile varchar(100) not null,
+	walk_title varchar(100) not null,
 	description text  not null,
 	image_url varchar(255) NOT NULL,
-	walk_date varchar(100)null,
+	walk_date varchar(100) null,
 	created_at datetime NOT NULL DEFAULT current_timestamp(),
 	updated_at datetime NOT NULL DEFAULT current_timestamp()
 );
