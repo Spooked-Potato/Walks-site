@@ -1,0 +1,23 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10rem;
+  height: 90vh;
+  background-image: url("../assets/img-28.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  background-color: var(--color);
+  max-height: 50rem;
+  min-width: 40%;
+  max-width: 40%;
+  padding: 4rem;
+  border-radius: 2rem;
+}
+
+.login-container {
+  padding: 2rem;
+}

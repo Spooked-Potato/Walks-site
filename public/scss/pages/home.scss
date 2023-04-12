@@ -1,0 +1,132 @@
+.banner {
+  background-image: url(../assets/Hero-img.png);
+  max-height: 40rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  height: 40rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/*banner*/
+
+/*main-section*/
+.main-section {
+  background-color: var(--main-color);
+  padding: 2rem;
+  height: auto;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-section-title {
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem;
+}
+
+.main-section-text {
+  color: #ffffff;
+  padding: 2rem;
+  text-align: justify;
+}
+/*main-section*/
+
+/*section-choices*/
+.section-choices {
+  padding: 2rem;
+}
+
+.spliter {
+  border: 5px solid gray;
+}
+
+.container-text {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: justify;
+}
+/*section-choices*/
+
+/*Img Grid*/
+.grid-wrapper {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.image-grid {
+  width: 100%;
+  max-width: 100rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.four-img-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.four-img-grid .image-grid-item {
+  width: 50%;
+}
+
+:is(.one-img-grid, .main-img-grid) .image-grid-item {
+  height: 100%;
+}
+
+.main-img-grid {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+}
+
+.panorama {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.image-grid-item img {
+  transition: 1s ease;
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+}
+
+.image-grid-item img:is(:hover, :focus) {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  z-index: 2;
+  box-shadow: 10px 12px 6px #1e1e1e7d;
+}
+
+/*Great*/
+.great {
+  padding: 2rem;
+}
+
+@media only screen and (min-width: 50em) {
+  .section-choices {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+  }
+
+  :is(
+      .main-section,
+      .section-choices,
+      .grid-wrapper,
+      .form-wrapper,
+      .walk-wrapper
+    ) {
+    padding: 6rem;
+  }
+}

@@ -1,0 +1,42 @@
+.banner-contact {
+  background-image: url("../assets/banner.png");
+}
+/*Text*/
+
+.contact-information {
+  padding: 2rem;
+  text-align: center;
+}
+.contact-text {
+  text-align: center;
+  padding: 5rem;
+}
+
+/*Form*/
+.contact-form {
+  background-color: var(--color);
+  height: auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.form-item-container {
+  padding: 2rem;
+}
+
+.button-form {
+  display: flex;
+  justify-content: center;
+}
+
+.needhelp-container {
+  padding: 4rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .contact-form {
+    max-width: 40%;
+    margin: 5rem auto;
+  }
+}

@@ -1,3 +1,12 @@
+@use "globals/root";
+@use "components/navBar";
+@use "components/footer";
+@use "pages/home";
+@use "pages/walk";
+@use "pages/contact";
+@use "pages/login";
+@use "pages/thankYou";
+
 *,
 ::before,
 ::after {
@@ -104,12 +113,3 @@ textarea {
   transition: all 0.3s ease-in-out;
   font-weight: 700;
 }
-
-@use "globals/root";
-@use "components/navBar";
-@use "components/footer";
-@use "pages/home";
-@use "pages/walk";
-@use "pages/contact";
-@use "pages/login";
-@use "pages/thankYou";

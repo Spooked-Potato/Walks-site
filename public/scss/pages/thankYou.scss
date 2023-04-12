@@ -1,0 +1,11 @@
+.thankyou-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50rem;
+}
+
+.thankyou-h1 {
+  padding: 5rem !important;
+}
