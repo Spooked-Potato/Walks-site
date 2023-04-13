@@ -39,8 +39,8 @@
               </tr>
             </thead>
             <tbody>
-              <% items.forEach(item =>{ %> <%-include('./partials/walkItem') %>
-              <% }) %>
+              <% items.forEach(item =>{ %> <%-include('./partials/walkItem',
+              {item: item}) %> <% }) %>
             </tbody>
           </table>
         </div>
@@ -125,9 +125,10 @@
     <div id="editEmployeeModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form>
+          <form action="admin/updatePost" method="POST" id="editWalk">
+            <input type="hidden" id="itemId" value="" />
             <div class="modal-header">
-              <h4 class="modal-title">Edit Employee</h4>
+              <h4 class="modal-title">Edit Walk</h4>
               <button
                 type="button"
                 class="close"
@@ -140,19 +141,38 @@
             <div class="modal-body">
               <div class="form-group">
                 <label>Walk Title</label>
-                <input type="text" class="form-control" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editTitleInput"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label>Description</label>
-                <textarea class="form-control" required></textarea>
+                <textarea
+                  class="form-control"
+                  id="editDescriptionInput"
+                  required
+                ></textarea>
               </div>
               <div class="form-group">
                 <label>Date</label>
-                <input type="email" class="form-control" required />
+                <input
+                  type="email"
+                  class="form-control"
+                  id="editDateInput"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label>Image</label>
-                <input type="text" class="form-control" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editImageInput"
+                  required
+                />
               </div>
             </div>
             <div class="modal-footer">
@@ -162,7 +182,12 @@
                 data-dismiss="modal"
                 value="Cancel"
               />
-              <input type="submit" class="btn btn-info" value="Save" />
+              <input
+                type="submit"
+                class="btn btn-info"
+                id="editbtn"
+                value="Save"
+              />
             </div>
           </form>
         </div>
@@ -173,7 +198,8 @@
     <div id="deleteEmployeeModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form>
+          <form action="admin/walkDelete" method="POST" id="deleteWalk">
+            <input type="hidden" id="itemId" value="" />
             <div class="modal-header">
               <h4 class="modal-title">Delete walk</h4>
               <button
@@ -198,7 +224,12 @@
                 data-dismiss="modal"
                 value="Cancel"
               />
-              <input type="submit" class="btn btn-danger" value="Delete" />
+              <input
+                type="submit"
+                class="btn btn-danger"
+                id="deletebtn"
+                value="Delete"
+              />
             </div>
           </form>
         </div>

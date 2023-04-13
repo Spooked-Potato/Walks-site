@@ -1,0 +1,47 @@
+npm install -d nodemon
+npm install passport
+npm install ejs
+npm install body-parser
+npm install --save mysql2
+
+
+criação de dois ficheiros 
+    dockerfile
+    docker-compose.yml
+
+criação de ficheiro python onde coloca a api
+
+
+correr
+docker build -f dockerfile -t name  . 
+docker-compose run --rm "pasta" poetry init
+
+docker compose run --rm "pasta" poetry add fastapi uvicorn
+docker compose build             
+docker-compose up
+
+docker compose run uvicorn src.run:api  --reload  --host 0.0.0.0                
+
+mudar o docker-compose.yml e para descomentar o run poetry install
+
+docker build 
+docker compose up
+
+
+docker-compose up --build
+docker ps
+docker exec -it "id" bash
+docker exec -it "id" mysql -p
+
+npm install -g gulp
+npm init
+gulp
+npm install -D gulp-clean
+npm install -D gulp-clean-css
+npm install -D gulp-clean-concat
+npm install -D gulp-clean-copy
+npm install -D gulp-clean-each
+npm install -D gulp-clean-rename
+npm install -D gulp-source-replace
+npm install -D gulp-terser
+npm install -D del

@@ -6,19 +6,18 @@ export const admin_router = express.Router();
 
 export const getWalk = async () => {
   const results = await queryDatabase("select * from walkPost");
-  console.log(results);
   return results;
 };
 
 admin_router.get("/admin", (req, res) => {
   res.render("../views/crud.ejs");
+  res.render("../views/weekly.ejs");
 });
 
 admin_router.get("/admin/users", async (req, res) => {
   try {
     const reqUser = await queryDatabase("select * from user");
     const users = reqUser[0];
-    console.log(users);
   } catch (error) {
     console.log(error);
   }
@@ -34,7 +33,6 @@ admin_router.post("/newWalk", async (req, res) => {
       req.body.walk_date,
     ]
   );
-  console.log(result);
 
   res.json(result);
 });
@@ -48,7 +46,7 @@ admin_router.get("/walkPosts/:id", async (req, res) => {
   const results = await queryDatabase("select * from walkPost where id=?", [
     req.params.id,
   ]);
-  console.log(results);
+
   res.json(results);
 });
 
@@ -63,7 +61,7 @@ admin_router.post("/updatePost", async (req, res) => {
       req.body.id,
     ]
   );
-  console.log(results);
+
   res.json(results);
 });
 
@@ -71,6 +69,6 @@ admin_router.post("/walkDelete", async (req, res) => {
   const results = await queryDatabase("delete from walkPost where id=?", [
     req.body.id,
   ]);
-  console.log(results);
+
   res.json(results);
 });

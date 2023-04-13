@@ -23,8 +23,9 @@ app.get("/private", (req, res) => {
   res.render("private");
 });
 
-app.get("/weekly", (req, res) => {
-  res.render("weekly");
+app.get("/weekly", async (req, res) => {
+  const result = await getWalk();
+  res.render("weekly", { items: result.data });
 });
 
 app.get("/login", (req, res) => {
@@ -33,7 +34,6 @@ app.get("/login", (req, res) => {
 
 app.get("/crud", async (req, res) => {
   const result = await getWalk();
-  console.log(result.data);
   res.render("crud", { items: result.data });
 });
 

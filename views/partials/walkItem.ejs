@@ -1,14 +1,14 @@
-<tr>
+<tr id="walkItem-<%= item.id %>" class="walkItem">
   <td>
     <span class="custom-checkbox">
-      <input type="checkbox" id="checkbox1" name="options[]" value="1" />
+      <input type="checkbox" name="options[]" value="1" />
       <label for="checkbox1"></label>
     </span>
   </td>
-  <td><%= item.walk_title %></td>
-  <td><%= item.description %></td>
-  <td><%= item.image_url %></td>
-  <td><%= item.walk_date %></td>
+  <td class="walkItemName"><%= item.walk_title %></td>
+  <td class="walkItemDescription"><%= item.description %></td>
+  <td class="walkItemDate"><%= item.walk_date %></td>
+  <td class="walkItemImage"><%= item.image_url %></td>
   <td><%= item.created_at %></td>
   <td><%= item.updated_at %></td>
 
