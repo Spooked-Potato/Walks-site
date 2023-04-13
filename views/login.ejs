@@ -1,7 +1,7 @@
 <%- include("./partials/navbar.ejs")%>
 
 <div class="login-wrapper">
-  <form class="login">
+  <form class="login" id="login-form">
     <div class="login-container">
       <label>Email</label>
       <input
@@ -22,8 +22,10 @@
       />
     </div>
     <div class="login-container">
-      <button type="submit" class="button">LOGIN</button>
+      <button type="submit" class="button" value="login">LOGIN</button>
     </div>
+    <div id="error-message"></div>
   </form>
 </div>
+<script src="../public/js/login.js"></script>
 <%- include("./partials/footer.ejs")%>

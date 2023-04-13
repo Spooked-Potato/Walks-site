@@ -2,7 +2,8 @@ npm install -d nodemon
 npm install passport
 npm install ejs
 npm install body-parser
-npm install --save mysql2
+npm install --save mysql2 
+npm install --save multer
 
 
 criação de dois ficheiros 

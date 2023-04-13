@@ -1,8 +1,6 @@
 import express from "express";
-import ejs from "ejs";
 import bodyParser from "body-parser";
 const app = express();
-import { queryDatabase } from "./database.js";
 import { admin_router, getWalk } from "./routes/admin.js";
 
 app.use(express.static("public"));

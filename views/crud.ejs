@@ -30,6 +30,8 @@
           <table class="table table-striped table-hover">
             <thead>
               <tr>
+                <th></th>
+                <th>ID</th>
                 <th>Walk</th>
                 <th>Description</th>
                 <th>Date - Walk</th>
@@ -51,7 +53,12 @@
     <div id="addEmployeeModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form action="admin/newWalk " method="POST" id="addNewWalk">
+          <form
+            action="admin/newWalk "
+            method="POST"
+            id="addNewWalk"
+            enctype="multipart/form-data"
+          >
             <div class="modal-header">
               <h4 class="modal-title">Add Walk</h4>
               <button
@@ -95,9 +102,12 @@
               <div class="form-group">
                 <label>Image</label>
                 <input
+                  name="image"
                   id="image_url"
                   name="image_url"
                   class="form-control"
+                  type="file"
+                  accept="image/"
                   required
                 />
               </div>
@@ -125,7 +135,12 @@
     <div id="editEmployeeModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form action="admin/updatePost" method="POST" id="editWalk">
+          <form
+            action="admin/updatePost"
+            method="POST"
+            id="editWalk"
+            enctype="multipart/form-data"
+          >
             <input type="hidden" id="itemId" value="" />
             <div class="modal-header">
               <h4 class="modal-title">Edit Walk</h4>
@@ -168,9 +183,11 @@
               <div class="form-group">
                 <label>Image</label>
                 <input
-                  type="text"
+                  name="image"
                   class="form-control"
                   id="editImageInput"
+                  type="file"
+                  accept="image/"
                   required
                 />
               </div>
