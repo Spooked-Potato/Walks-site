@@ -7,6 +7,7 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
+console.log("./ : ", path.resolve("./"));
 const filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(filename);
 
@@ -34,6 +35,7 @@ admin_router.get("/admin/users", async (req, res) => {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
+    console.log(__dirname);
     const dirPath = path.join(__dirname, "../public/");
     cb(null, dirPath + "assets/uploads/");
   },
@@ -46,12 +48,17 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 admin_router.post("/newWalk", upload.single("file"), async (req, res) => {
+  // Create a unique filename for the uploaded image
+
+  const filename = `${Date.now()}-${req.file.originalname}`;
+
+  // Store the path to the image in the database
   const result = await queryDatabase(
     "INSERT INTO walkPost (walk_title, description, image_url, walk_date) VALUES (?, ?, ?, ?)",
     [
       req.body.walk_title,
       req.body.description,
-      `${filename}`, // store the path relative to the "public" directory
+      `/assets/uploads/${filename}`, // store the path relative to the "public" directory
       req.body.walk_date,
     ]
   );
@@ -68,7 +75,7 @@ admin_router.get("/walkPosts/:id", async (req, res) => {
   const results = await queryDatabase("select * from walkPost where id=?", [
     req.params.id,
   ]);
-  console.log(results);
+
   res.json(results);
 });
 
@@ -83,7 +90,7 @@ admin_router.post("/updatePost", async (req, res) => {
       req.body.id,
     ]
   );
-  console.log(results);
+
   res.json(results);
 });
 
@@ -91,6 +98,6 @@ admin_router.post("/walkDelete", async (req, res) => {
   const results = await queryDatabase("delete from walkPost where id=?", [
     req.body.id,
   ]);
-  console.log(results);
+
   res.json(results);
 });
