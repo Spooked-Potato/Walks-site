@@ -34,16 +34,16 @@ function setUpAddWalk() {
   submitBtn.onclick = async function (e) {
     e.preventDefault();
     const form = document.querySelector("#addNewWalk");
-    const output = {
-      walk_title: form.querySelector("#walk_title").value,
-      description: form.querySelector("#description").value,
-      image_url: form.querySelector("#image_url").value,
-      walk_date: form.querySelector("#walk_date").value,
-    };
+
+    const output = new FormData();
+    output.append("walk_title", form.querySelector("#walk_title").value);
+    output.append("description", form.querySelector("#description").value);
+    output.append("file", form.querySelector("#image_url").files[0]);
+    output.append("walk_date", form.querySelector("#walk_date").value);
+
     const request = await fetch("admin/newWalk", {
       method: "POST",
-      headers: { "Content-Type": "application/JSON" },
-      body: JSON.stringify(output),
+      body: output,
     });
     const result = await request.json();
 

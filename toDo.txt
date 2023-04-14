@@ -1,0 +1,8 @@
+To do
+
+Falta corrigir navbar
+Falta fazer upload de imagens
+adicionar imagens da julie e adicionar texto
+
+falta fazer login martelado
+corrigir crud

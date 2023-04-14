@@ -2,13 +2,18 @@ import bodyParser from "body-parser";
 import express from "express";
 import { queryDatabase } from "../database.js";
 import multer from "multer";
-const path = require("path");
+import path from "path";
+import fs from "fs";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(filename);
 
 export const admin_router = express.Router();
 
 export const getWalk = async () => {
   const results = await queryDatabase("select * from walkPost");
-  console.log(results);
   return results;
 };
 
@@ -27,55 +32,30 @@ admin_router.get("/admin/users", async (req, res) => {
   }
 });
 
-const upload = multer({
-  dest: "public/assets/uploads/",
-  limits: {
-    fileSize: 10 * 1024 * 1024, // limit the maximum file size to 10MB
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    const dirPath = path.join(__dirname, "../public/");
+    cb(null, dirPath + "assets/uploads/");
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    cb(null, file.fieldname + "-" + uniqueSuffix + ".jpg");
   },
 });
 
-// admin_router.post("/newWalk", async (req, res) => {
-//   const result = await queryDatabase(
-//     "insert into walkPost (walk_title, description, image_url, walk_date) VALUES(?,?,?,?)",
-//     [
-//       req.body.walk_title,
-//       req.body.description,
-//       req.body.image_url,
-//       req.body.walk_date,
-//     ]
-//   );
-//   console.log(result);
+const upload = multer({ storage: storage });
 
-//   res.json(result);
-// });
-
-admin_router.post("/newWalk", upload.single("image"), async (req, res) => {
-  // Create a unique filename for the uploaded image
-  const filename = `${Date.now()}-${req.file.originalname}`;
-
-  // Move the uploaded image to the designated directory
-  const uploadPath = path.join(
-    __dirname,
-    "public",
-    "assets",
-    "uploads",
-    filename
-  );
-  await fs.promises.rename(req.file.path, uploadPath);
-
-  // Store the path to the image in the database
+admin_router.post("/newWalk", upload.single("file"), async (req, res) => {
   const result = await queryDatabase(
     "INSERT INTO walkPost (walk_title, description, image_url, walk_date) VALUES (?, ?, ?, ?)",
     [
       req.body.walk_title,
       req.body.description,
-      `/assets/uploads/${filename}`, // store the path relative to the "public" directory
+      `${filename}`, // store the path relative to the "public" directory
       req.body.walk_date,
     ]
   );
-  console.log(filename);
 
-  console.log(result);
   res.json(result);
 });
 
