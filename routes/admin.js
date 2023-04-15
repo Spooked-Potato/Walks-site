@@ -77,13 +77,14 @@ admin_router.get("/walkPosts/:id", async (req, res) => {
   res.json(results);
 });
 
-admin_router.post("/updatePost", async (req, res) => {
+admin_router.post("/updatePost", upload.single("file"), async (req, res) => {
+  const filename = `${req.file.filename}`;
   const results = await queryDatabase(
     "update walkPost set walk_title=?, description=?, image_url=?, walk_date=? where id=?",
     [
       req.body.walk_title,
       req.body.description,
-      req.body.image_url,
+      `/assets/uploads/${filename}`,
       req.body.walk_date,
       req.body.id,
     ]
