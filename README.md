@@ -47,6 +47,7 @@ List of dependencies used in the project:
 - ejs
 - passport
 - Nodedemon
+- multer
 
 ## Usage
 

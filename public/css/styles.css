@@ -156,7 +156,7 @@
 }
 
 .banner {
-  background-image: url(../assets/Hero-img.png);
+  background-image: url(../assets/img/Hero-img.png);
   max-height: 40rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -342,7 +342,7 @@
   }
 }
 .banner-contact {
-  background-image: url("../assets/banner.png");
+  background-image: url("../assets/img/banner.png");
 }
 
 /*Text*/

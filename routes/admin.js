@@ -7,7 +7,6 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
-console.log("./ : ", path.resolve("./"));
 const filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(filename);
 
@@ -49,8 +48,7 @@ const upload = multer({ storage: storage });
 
 admin_router.post("/newWalk", upload.single("file"), async (req, res) => {
   // Create a unique filename for the uploaded image
-
-  const filename = `${Date.now()}-${req.file.originalname}`;
+  const filename = `${req.file.filename}`;
 
   // Store the path to the image in the database
   const result = await queryDatabase(
