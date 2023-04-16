@@ -1,5 +1,5 @@
 npm install express
-npm install -d nodemon
+npm install -D nodemon
 npm install passport
 npm install ejs
 npm install body-parser

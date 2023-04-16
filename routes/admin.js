@@ -3,7 +3,7 @@ import express from "express";
 import { queryDatabase } from "../database.js";
 import multer from "multer";
 import path from "path";
-import fs from "fs";
+import { unlink } from "fs";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
@@ -34,34 +34,58 @@ admin_router.get("/admin/users", async (req, res) => {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    console.log(__dirname);
     const dirPath = path.join(__dirname, "../public/");
     cb(null, dirPath + "assets/uploads/");
   },
+
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
     cb(null, file.fieldname + "-" + uniqueSuffix + ".jpg");
   },
 });
 
-const upload = multer({ storage: storage });
+const uploadFilter = function (req, file, cb) {
+  const typeArray = file.mimetype.split("/");
+  const imageTypeMaybe = typeArray[1];
+  if (imageTypeMaybe === "jpeg" || imageTypeMaybe === "png") {
+    cb(null, true);
+    console.log("sucesso");
+  } else {
+    console.log("erro");
+    cb(new Error("it's not jpg or png"), false);
+  }
+};
+//image type validation
 
-admin_router.post("/newWalk", upload.single("file"), async (req, res) => {
-  // Create a unique filename for the uploaded image
-  const filename = `${req.file.filename}`;
+const upload = multer({
+  storage,
+  fileFilter: uploadFilter,
+}).single("file");
 
-  // Store the path to the image in the database
-  const result = await queryDatabase(
-    "INSERT INTO walkPost (walk_title, description, image_url, walk_date) VALUES (?, ?, ?, ?)",
-    [
-      req.body.walk_title,
-      req.body.description,
-      `/assets/uploads/${filename}`, // store the path relative to the "public" directory
-      req.body.walk_date,
-    ]
-  );
+admin_router.post("/newWalk", (req, res) => {
+  upload(req, res, async (err) => {
+    if (err) {
+      return res.status(400).send(err.message);
+    }
 
-  res.json(result);
+    // Everything went fine.
+
+    // Create a unique filename for the uploaded image
+    const filename = `${req.file.filename}`;
+
+    // Store the path to the image in the database
+    const result = await queryDatabase(
+      "INSERT INTO walkPost (walk_title, description, image_url, walk_date) VALUES (?, ?, ?, ?)",
+      [
+        req.body.walk_title,
+        req.body.description,
+        `/assets/uploads/${filename}`, // store the path relative to the "public" directory
+        req.body.walk_date,
+      ]
+    );
+
+    res.json(result);
+  });
 });
 
 admin_router.get("/walkPosts", async (req, res) => {
@@ -77,14 +101,13 @@ admin_router.get("/walkPosts/:id", async (req, res) => {
   res.json(results);
 });
 
-admin_router.post("/updatePost", upload.single("file"), async (req, res) => {
-  const filename = `${req.file.filename}`;
+admin_router.post("/updatePost", async (req, res) => {
   const results = await queryDatabase(
     "update walkPost set walk_title=?, description=?, image_url=?, walk_date=? where id=?",
     [
       req.body.walk_title,
       req.body.description,
-      `/assets/uploads/${filename}`,
+      req.body.image_url,
       req.body.walk_date,
       req.body.id,
     ]

@@ -15,6 +15,7 @@ The app is built using the following technologies:
 
 - HTML
 - CSS
+- Scss
 - JavaScript
 - Express JS
 - MySQL
@@ -48,6 +49,7 @@ List of dependencies used in the project:
 - passport
 - Nodedemon
 - multer
+- Scss
 
 ## Usage
 
