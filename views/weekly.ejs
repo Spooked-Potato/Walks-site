@@ -1,7 +1,14 @@
-<%- include("./partials/navbar.ejs")%>
-<div class="contact-text">
-  <h1 class="walk-h1">Weekly Walks</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/htmlTag.ejs")%>
+  <body>
+    <%- include("./partials/navbar.ejs")%>
 
-<% items.forEach(item =>{ %> <%-include('./partials/walkPost', {item: item}) %>
-<% }) %> <%-include("./partials/footer.ejs")%>
+    <div class="contact-text">
+      <h1 class="walk-h1">Weekly Walks</h1>
+    </div>
+
+    <% items.forEach(item =>{ %> <%-include('./partials/walkPost', {item: item})
+    %> <% }) %> <%-include("./partials/footer.ejs")%>
+  </body>
+</html>

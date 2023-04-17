@@ -1,31 +1,37 @@
-<%- include("./partials/navbar.ejs")%>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/htmlTag.ejs")%>
+  <body>
+    <%- include("./partials/navbar.ejs")%>
 
-<div class="login-wrapper">
-  <form class="login" id="login-form">
-    <div class="login-container">
-      <label>Email</label>
-      <input
-        type="text"
-        placeholder="Input your email"
-        name="email-login"
-        id="email-login"
-      />
-    </div>
+    <div class="login-wrapper">
+      <form class="login" id="login-form">
+        <div class="login-container">
+          <label>Email</label>
+          <input
+            type="text"
+            placeholder="Input your email"
+            name="email-login"
+            id="email-login"
+          />
+        </div>
 
-    <div class="login-container">
-      <label>Password</label>
-      <input
-        type="password"
-        placeholder="Input your password"
-        name="password-login"
-        id="password-login"
-      />
+        <div class="login-container">
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Input your password"
+            name="password-login"
+            id="password-login"
+          />
+        </div>
+        <div class="login-container">
+          <button type="submit" class="button" value="login">LOGIN</button>
+        </div>
+        <div id="error-message"></div>
+      </form>
     </div>
-    <div class="login-container">
-      <button type="submit" class="button" value="login">LOGIN</button>
-    </div>
-    <div id="error-message"></div>
-  </form>
-</div>
-<script src="../public/js/login.js"></script>
-<%- include("./partials/footer.ejs")%>
+    <script src="../public/js/login.js"></script>
+    <%- include("./partials/footer.ejs")%>
+  </body>
+</html>

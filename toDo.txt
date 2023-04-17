@@ -1,8 +1,4 @@
 To do
 1 - Deleting image on deleting post
 2 - Creating a login for backoffice
-3 - Correcting navbar
-4 - Intruducing Text and images
-
-    falta fazer
-  
+3 - Intruducing Text and images

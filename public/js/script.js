@@ -1,13 +1,17 @@
-// function scrollNav() {
-//   navScroll = document.getElementById("navbar");
-//   window.addEventListener("scroll", () => {
-//     const scroll_position = window.scrollY;
+function scrollNav() {
+  navScroll = document.querySelector(".navHome");
 
-//     let style = "";
-//     scroll_position > 400 ? (style = "#1e1e1e") : (style = "transparent");
-//     navScroll.style.backgroundColor = style;
-//   });
-// }
+  if (window.innerWidth > 500) {
+    window.addEventListener("scroll", () => {
+      const scroll_position = window.scrollY;
+
+      let style = "";
+      scroll_position > 400 ? (style = "#1e1e1e") : (style = "transparent");
+      navScroll.style.backgroundColor = style;
+    });
+    console.log("i am here!");
+  }
+}
 
 function showNav() {
   const buttonNav = document.querySelector("#menu-toggle");

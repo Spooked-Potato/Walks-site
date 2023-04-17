@@ -1,4 +1,6 @@
 .nav {
+  position: fixed;
+  width: 100%;
   background-color: var(--nav-color);
   min-height: 5rem;
   display: flex;
@@ -64,10 +66,15 @@
   border: 2px solid white;
   padding: 1rem;
 }
+
 .nav-link {
   color: white;
 }
 @media only screen and (min-width: 50em) {
+  .navHome {
+    background-color: transparent;
+  }
+
   #nav-list-container {
     justify-content: center;
     align-items: center;
@@ -80,8 +87,35 @@
   .nav-list {
     width: 100%;
     border: none;
+    text-align: center;
     padding: 2rem;
   }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+
+    background: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
   .menu-button-container {
     display: none;
     height: 100%;
