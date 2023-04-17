@@ -1,11 +1,10 @@
 To do
 1 - Upload of images when editing post
-2 - valadating image type
-3 - Deleting image on deleting post
-4 - Creating a login for backoffice
-5 - Correcting navbar
-6 - Intruducing Text and iamges
+2 - Deleting image on deleting post
+3 - Creating a login for backoffice
+4 - Correcting navbar
+5 - Intruducing Text and iamges
 
 
     falta fazer
-    1 - mimetype valadation
+  

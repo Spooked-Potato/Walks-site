@@ -102,18 +102,26 @@ admin_router.get("/walkPosts/:id", async (req, res) => {
 });
 
 admin_router.post("/updatePost", async (req, res) => {
-  const results = await queryDatabase(
-    "update walkPost set walk_title=?, description=?, image_url=?, walk_date=? where id=?",
-    [
-      req.body.walk_title,
-      req.body.description,
-      req.body.image_url,
-      req.body.walk_date,
-      req.body.id,
-    ]
-  );
+  upload(req, res, async (err) => {
+    if (err) {
+      return res.status(400).send(err.message);
+    }
 
-  res.json(results);
+    // Everything went fine.
+    const filename = `${req.file.filename}`;
+    const results = await queryDatabase(
+      "update walkPost set walk_title=?, description=?, image_url=?, walk_date=? where id=?",
+      [
+        req.body.walk_title,
+        req.body.description,
+        `/assets/uploads/${filename}`,
+        req.body.walk_date,
+        req.body.id,
+      ]
+    );
+
+    res.json(results);
+  });
 });
 
 admin_router.post("/walkDelete", async (req, res) => {

@@ -126,17 +126,19 @@ function setUpEditWalk() {
   submitBtn.onclick = async function (e) {
     e.preventDefault();
     const form = document.querySelector("#editWalk");
-    const output = {
-      id: form.querySelector("#itemId").value,
-      walk_title: form.querySelector("#editTitleInput").value,
-      description: form.querySelector("#editDescriptionInput").value,
-      walk_date: form.querySelector("#editDateInput").value,
-      image_url: form.querySelector("#editImageInput").value,
-    };
+    const output = new FormData();
+    output.append("id", form.querySelector("#itemId").value);
+    output.append("walk_title", form.querySelector("#editTitleInput").value);
+    output.append(
+      "description",
+      form.querySelector("#editDescriptionInput").value
+    );
+    output.append("walk_date", form.querySelector("#editDateInput").value);
+    output.append("file", form.querySelector("#editImageInput").files[0]);
+
     const request = await fetch("admin/updatePost", {
       method: "POST",
-      headers: { "Content-Type": "application/JSON" },
-      body: JSON.stringify(output),
+      body: output,
     });
     const result = await request.json();
 
