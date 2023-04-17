@@ -59,9 +59,7 @@ function setUpDeletedWalk() {
 
   walkItems.forEach((item, index) => {
     const id = item.id.replace("walkItem-", "");
-
     const deleteButton = item.querySelector(".delete");
-
     deleteButton.onclick = () => {
       form.querySelector("#itemId").value = parseInt(id);
     };

@@ -21,7 +21,7 @@ admin_router.get("/admin", (req, res) => {
   res.render("../views/crud.ejs");
   res.render("../views/weekly.ejs");
 });
-
+//render partials
 admin_router.get("/admin/users", async (req, res) => {
   try {
     const reqUser = await queryDatabase("select * from user");
@@ -31,6 +31,7 @@ admin_router.get("/admin/users", async (req, res) => {
     console.log(error);
   }
 });
+//call for database
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -61,6 +62,10 @@ const upload = multer({
   storage,
   fileFilter: uploadFilter,
 }).single("file");
+
+//midlewere
+
+//sistem router
 
 admin_router.post("/newWalk", (req, res) => {
   upload(req, res, async (err) => {

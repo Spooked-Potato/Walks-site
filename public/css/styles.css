@@ -9,44 +9,24 @@
   --box-shadow: 10px 12px 6px #1e1e1e7d;
 }
 
-.top-nav {
+.nav {
+  background-color: var(--nav-color);
+  min-height: 5rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #00baf0;
-  background: linear-gradient(to left, #f46b45, #eea849);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #fff;
-  height: 50px;
-  padding: 1em;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu > li {
-  margin: 0 1rem;
-  overflow: hidden;
-}
-
-.menu-button-container {
-  display: none;
-  height: 100%;
-  width: 30px;
-  cursor: pointer;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 #menu-toggle {
   display: none;
+}
+
+.menu-button-container {
+  padding: 2rem;
+  position: absolute;
+  top: 0.1rem;
+  right: 1rem;
 }
 
 .menu-button,
@@ -54,9 +34,9 @@
 .menu-button::after {
   display: block;
   background-color: #fff;
-  position: absolute;
   height: 4px;
-  width: 30px;
+  width: 3rem;
+  z-index: 20;
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
 }
@@ -85,44 +65,44 @@
   transform: rotate(-405deg);
 }
 
+#nav-list-container {
+  margin-top: 5rem;
+  width: 100%;
+  display: none;
+}
+
+.nav-list {
+  width: 100%;
+  border: 2px solid white;
+  padding: 1rem;
+}
+
+.nav-link {
+  color: white;
+}
+
 @media only screen and (min-width: 50em) {
-  .menu-button-container {
-    display: flex;
-  }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 50px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
+  #nav-list-container {
     justify-content: center;
     align-items: center;
-  }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
+    width: 70%;
+    display: block;
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
+    margin-top: 0;
   }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
+  .nav-list {
+    width: 100%;
+    border: none;
+    padding: 2rem;
+  }
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 3rem;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .footer {

@@ -1,10 +1,8 @@
 To do
-1 - Upload of images when editing post
-2 - Deleting image on deleting post
-3 - Creating a login for backoffice
-4 - Correcting navbar
-5 - Intruducing Text and iamges
-
+1 - Deleting image on deleting post
+2 - Creating a login for backoffice
+3 - Correcting navbar
+4 - Intruducing Text and images
 
     falta fazer
   
