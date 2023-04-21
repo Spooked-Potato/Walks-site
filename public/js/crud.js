@@ -35,11 +35,25 @@ function setUpAddWalk() {
     e.preventDefault();
     const form = document.querySelector("#addNewWalk");
 
+    const title = form.querySelector("#walk_title").value;
+    const description = form.querySelector("#description").value;
+    const files = form.querySelector("#image_url").files;
+    const date = form.querySelector("#walk_date").value;
+    if (
+      title.length === 0 ||
+      description.length === 0 ||
+      files.length === 0 ||
+      date.length === 0
+    ) {
+      alert("Form not completed");
+      return;
+    }
+
     const output = new FormData();
-    output.append("walk_title", form.querySelector("#walk_title").value);
-    output.append("description", form.querySelector("#description").value);
-    output.append("file", form.querySelector("#image_url").files[0]);
-    output.append("walk_date", form.querySelector("#walk_date").value);
+    output.append("walk_title", title);
+    output.append("description", description);
+    output.append("file", files[0]);
+    output.append("walk_date", date);
 
     const request = await fetch("admin/newWalk", {
       method: "POST",
@@ -124,15 +138,22 @@ function setUpEditWalk() {
   submitBtn.onclick = async function (e) {
     e.preventDefault();
     const form = document.querySelector("#editWalk");
+
+    const title = form.querySelector("#editTitleInput").value;
+    const description = form.querySelector("#editDescriptionInput").value;
+    const files = form.querySelector("#editImageInput").files;
+    const date = form.querySelector("#editDateInput").value;
+    if (title.length === 0 || description.length === 0 || date.length === 0) {
+      alert("Form not completed");
+      return;
+    }
+
     const output = new FormData();
     output.append("id", form.querySelector("#itemId").value);
-    output.append("walk_title", form.querySelector("#editTitleInput").value);
-    output.append(
-      "description",
-      form.querySelector("#editDescriptionInput").value
-    );
-    output.append("walk_date", form.querySelector("#editDateInput").value);
-    output.append("file", form.querySelector("#editImageInput").files[0]);
+    output.append("walk_title", title);
+    output.append("description", description);
+    output.append("file", files[0]);
+    output.append("walk_date", date);
 
     const request = await fetch("admin/updatePost", {
       method: "POST",

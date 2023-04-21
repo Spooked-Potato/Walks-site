@@ -2,8 +2,8 @@ use walks;
 
 create table user(
 	id int not null auto_increment primary key,
-	user_name varchar(100) not null,
-	admin bool DEFAULT true
+	username varchar(100) not null,
+	password varchar(100) not null
 );
 
 
