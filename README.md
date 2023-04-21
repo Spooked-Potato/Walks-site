@@ -43,10 +43,12 @@ The server should now be running at http://localhost:3000.
 List of dependencies used in the project:
 
 - express
+- express-session
 - mysql2S
 - body-parser
 - ejs
 - passport
+- passport-local
 - Nodedemon
 - multer
 - Scss

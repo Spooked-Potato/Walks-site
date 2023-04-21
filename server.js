@@ -86,7 +86,7 @@ app.post(
   passport.authenticate("local", {
     successRedirect: "/crud",
     failureRedirect: "/",
-  })
+  })(req, res)
 );
 
 app.get("/doLogout", async (req, res) => {

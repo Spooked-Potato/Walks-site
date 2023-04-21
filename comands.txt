@@ -1,6 +1,8 @@
 npm install express
+npm install express-session
 npm install -D nodemon
 npm install passport
+npm install passport-local
 npm install ejs
 npm install body-parser
 npm install --save mysql2 
