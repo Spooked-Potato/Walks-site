@@ -9,7 +9,6 @@ function scrollNav() {
       scroll_position > 400 ? (style = "#1e1e1e") : (style = "transparent");
       navScroll.style.backgroundColor = style;
     });
-    console.log("i am here!");
   }
 }
 

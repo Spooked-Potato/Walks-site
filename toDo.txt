@@ -1,4 +1,3 @@
 To do
-1 - Deleting image on deleting post
-2 - Creating a login for backoffice
-3 - Intruducing Text and images
+1 - Creating a login for backoffice
+2 - Intruducing Text and images

@@ -18,6 +18,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: 2;
 }
 
 #menu-toggle {
@@ -396,7 +397,7 @@
   justify-content: center;
   padding: 10rem;
   height: 90vh;
-  background-image: url("../assets/img-28.jpg");
+  background-image: url("../assets/img/img-28.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

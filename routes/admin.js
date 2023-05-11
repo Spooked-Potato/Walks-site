@@ -48,9 +48,7 @@ const uploadFilter = function (req, file, cb) {
   const imageTypeMaybe = typeArray[1];
   if (imageTypeMaybe === "jpeg" || imageTypeMaybe === "png") {
     cb(null, true);
-    console.log("sucesso");
   } else {
-    console.log("erro");
     cb(new Error("it's not jpg or png"), false);
   }
 };
@@ -75,7 +73,6 @@ admin_router.post("/newWalk", (req, res) => {
 
     // Create a unique filename for the uploaded image
     const filename = `${req.file.filename}`;
-    console.log(filename);
 
     // Store the path to the image in the database
     const result = await queryDatabase(
@@ -123,7 +120,6 @@ admin_router.post("/updatePost", async (req, res) => {
       const fileDelResult = await deleteFile(filePath);
     } else {
       filename = result.data[0].image_url;
-      console.log("filename-", filename);
     }
     // Everything went fine.
 
